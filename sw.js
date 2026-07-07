@@ -1,8 +1,10 @@
-// sw.js — Service Worker del Menú Digital
+// sw.js — Service Worker del Comandero
 // Estrategia: cache-first con actualización en segundo plano (stale-while-revalidate)
 // Objetivo: la app debe abrir y funcionar SIN internet ni wifi después de la primera visita.
+// IMPORTANTE: nombre de caché distinto al del menú para que ambas apps no se pisen
+// si algún día viven bajo el mismo dominio.
 
-const CACHE_NAME = 'menu-paco-cache-v1';
+const CACHE_NAME = 'comandero-paco-cache-v1';
 const CORE_ASSETS = [
   './',
   './index.html',
